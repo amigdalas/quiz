@@ -34,11 +34,11 @@ ChangeQuestion(counter)
 document.body.onkeyup = function(e){
 
 if(e.keyCode == 49){
-document.body.style.backgroundColor = "green";
+document.body.style.backgroundColor = "SeaGreen";
     }
 
 if(e.keyCode == 50){
-document.body.style.backgroundColor = "red";
+document.body.style.backgroundColor = "FireBrick";
     }
 
     if(e.keyCode == 32){

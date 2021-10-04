@@ -36,14 +36,19 @@ document.body.onkeyup = function(e){
 
 if(e.keyCode == 49){
 bgColor = "Green";
+document.getElementById("perguntasBox").innerText = "RESPOSTA CORRETA"
     }
 
 if(e.keyCode == 50){
 bgColor = "FireBrick";
+
+document.getElementById("perguntasBox").innerText = "RESPOSTA ERRADA"
     }
 
 if(e.keyCode == 51){
 bgColor = "black";
+
+document.getElementById("perguntasBox").innerText = "PRÓXIMA PERGUNTA"
     }
 
     if(e.keyCode == 32){

@@ -35,7 +35,7 @@ ChangeQuestion(counter)
 document.body.onkeyup = function(e){
 
 if(e.keyCode == 49){
-bgColor = "SeaGreen";
+bgColor = "Green";
     }
 
 if(e.keyCode == 50){
@@ -43,6 +43,7 @@ bgColor = "FireBrick";
     }
 
     if(e.keyCode == 32){
+document.body.style.backgroundColor = 'black';
 bgColor = "black";
         counter ++
 ChangeQuestion(counter)

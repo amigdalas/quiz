@@ -32,7 +32,17 @@ ChangeQuestion(counter)
 }
 
 document.body.onkeyup = function(e){
+
+if(e.keyCode == 49){
+document.body.style.backgroundColor = "green";
+    }
+
+if(e.keyCode == 50){
+document.body.style.backgroundColor = "red";
+    }
+
     if(e.keyCode == 32){
+document.body.style.backgroundColor = "black";
         counter ++
 ChangeQuestion(counter)
     }

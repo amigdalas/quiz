@@ -42,6 +42,10 @@ if(e.keyCode == 50){
 bgColor = "FireBrick";
     }
 
+if(e.keyCode == 51){
+bgColor = "black";
+    }
+
     if(e.keyCode == 32){
 document.body.style.backgroundColor = 'black';
 bgColor = "black";

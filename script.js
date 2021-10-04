@@ -26,6 +26,11 @@ document.getElementById("perguntasBox").innerText = perguntas[n];
 
 ChangeQuestion(counter);
 
+document.onclick= function(e) {
+        counter ++
+ChangeQuestion(counter)
+}
+
 document.body.onkeyup = function(e){
     if(e.keyCode == 32){
         counter ++

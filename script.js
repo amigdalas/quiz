@@ -1,18 +1,17 @@
 var perguntas = [
-    "Você é casada/o ?",
-    "Você tem filhos?",
-    "Você já abortou?",
-    "Você quer engravidar?",
-    "Quando você sente cólica \n você falta no trabalho?",
-    "Você já se aproveitou da licença maternidade?",
+    "Você é casada/o?",
+    "Você pretende ter filhos?",
+    "Quando você fica doente,\nvocê falta no trabalho?",
+    "O que você faz para agradar o chefão?",
     "Cite um defeito e uma qualidade sua.",
-    "Você é um pai/chefe de família?",
-    "Você tem uma vida sexual ativa? \n isso mesmo, você transa?",
-    "Você usa tabelinha? \n Ou o seu marido aprovou você usar o Diu?",
-    "Você é fértil?",
-    "Você passa bem as suas roupas?"
+    "Você tem uma vida sexual ativa?\nIsso mesmo, você transa?",
+    "Quantas horas você dorme por dia?",
+    "Você toma remédio controlado?",
+    "Você trabalha em casa?",
+    " Qual o seu record de horas trabalhadas ininterruptas?"
+
 ];
-var perguntas2 = [
+var perguntas2 = [/*
     "Você engana as pessoas para parecer melhor aos olhos delas?",
     "Você usa de mentiras para conseguir o que quer?",
     "Você facilmente perde a paciência?",
@@ -46,7 +45,9 @@ var perguntas2 = [
     "A maioria das pessoas é preguiçosa e não trabalha duro a menos que seja necessário?",
     "Ser uma pessoa ética é mais importante do que passar na frente dos outros?",
     "Se preocupar com a moralidade dos seus atos é algo para perdedores?"
-];
+*/];
+
+
 
 
 Array.prototype.shuffle = function() {

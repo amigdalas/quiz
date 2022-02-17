@@ -58,7 +58,7 @@ var perguntas2 = [
   "Se preocupar com a moralidade dos seus atos é algo para perdedores?",
 ];
 
-var respostas = ["RESPOSTA CORRETA", "RESPOSTA ERRADA", "RESPOSTA INCOMPLETA", logo]
+var respostas = ["RESPOSTA CORRETA", "RESPOSTA ERRADA", "RESPOSTA INCOMPLETA", "PRÓXIMA PERGUNTA", logo]
 
 Array.prototype.shuffle = function () {
   var i = this.length,

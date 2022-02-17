@@ -4,6 +4,7 @@ var shuffler = url.searchParams.get("random");
 var maximo = url.searchParams.get("maximo");
 
 var animTXT = 30;
+var logo  = document.getElementById("perguntasBox").innerHTML;
 
 var perguntas = [
   "Quantas horas você dorme por dia?",
@@ -83,7 +84,7 @@ var bgColor = "black";
 if (shuffler) perguntas = perguntas.shuffle();
 if (maximo) perguntas.length = maximo;
 
-perguntas.push("ACABARAM AS PERGUNTAS");
+perguntas.push(logo);
 
 const ChangeQuestion = async (n) => {
   document.body.style.backgroundColor = "black";
@@ -93,17 +94,17 @@ const ChangeQuestion = async (n) => {
 
   if (
     n != 0 &&
-    document.getElementById("perguntasBox").innerText != "PRÓXIMA PERGUNTA"
+    document.getElementById("perguntasBox").innerHTML != "PRÓXIMA PERGUNTA"
   )
-    return (document.getElementById("perguntasBox").innerText =
+    return (document.getElementById("perguntasBox").innerHTML =
       "PRÓXIMA PERGUNTA");
 
   for (let i = 0; i < perguntas2.length; i++) {
-    document.getElementById("perguntasBox").innerText = perguntas2[i];
+    document.getElementById("perguntasBox").innerHTML = perguntas2[i];
     await sleep(animTXT);
   }
 
-  document.getElementById("perguntasBox").innerText = perguntas[n];
+  document.getElementById("perguntasBox").innerHTML = perguntas[n];
   counter++;
 };
 
@@ -116,19 +117,17 @@ document.onclick = function (e) {
 document.body.onkeyup = function (e) {
   if (e.keyCode == 49) {
     bgColor = "Green";
-    document.getElementById("perguntasBox").innerText = "RESPOSTA CORRETA";
+    document.getElementById("perguntasBox").innerHTML = "RESPOSTA CORRETA";
   }
 
   if (e.keyCode == 50) {
     bgColor = "FireBrick";
-
-    document.getElementById("perguntasBox").innerText = "RESPOSTA ERRADA";
+    document.getElementById("perguntasBox").innerHTML = "RESPOSTA ERRADA";
   }
 
   if (e.keyCode == 51) {
     bgColor = "orange";
-
-    document.getElementById("perguntasBox").innerText = "RESPOSTA INCOMPLETA";
+    document.getElementById("perguntasBox").innerHTML = "RESPOSTA INCOMPLETA";
   }
 
   if (e.keyCode == 32) {

@@ -68,6 +68,10 @@ Array.prototype.shuffle = function () {
   return this;
 };
 
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
+
 var counter = 0;
 var bgColor = "black";
 
@@ -139,6 +143,8 @@ function flashtext(ele, col) {
     document.body.style.backgroundColor = "black";
   }
 }
+
+
 
 setInterval(function () {
   flashtext("flashingtext", bgColor);

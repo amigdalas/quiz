@@ -24,6 +24,12 @@ body{
   font-size:250%;
 }
 
+#footer {
+    position: absolute;
+    bottom:0px;
+  right:0px;
+}
+
 #logo{
 
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */

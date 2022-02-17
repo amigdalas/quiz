@@ -103,24 +103,22 @@ const ChangeQuestion = async (n) => {
   }
 
   document.getElementById("perguntasBox").innerHTML = perguntas[n];
-  bgColor = "#00003B";
+  if (document.getElementById("perguntasBox").innerHTML != logo) bgColor = "#00003B"
+  else bgColor = "black"
   counter++;
 };
 
 //ChangeQuestion(counter);
 
 document.onclick = function (e) {
-  ChangeQuestion(counter);
+  if (document.getElementById("perguntasBox").innerHTML == "PRÓXIMA PERGUNTA") ChangeQuestion(counter);
 };
 
 document.body.onkeyup = function (e) {
 
-  if (e.keyCode == 32) return ChangeQuestion(counter);
+  if (e.keyCode == 32 && document.getElementById("perguntasBox").innerHTML == "PRÓXIMA PERGUNTA") return ChangeQuestion(counter);
 
 if (document.getElementById("perguntasBox").innerHTML == "PRÓXIMA PERGUNTA") return;
-if (document.getElementById("perguntasBox").innerHTML == "RESPOSTA CORRETA") return;
-if (document.getElementById("perguntasBox").innerHTML == "RESPOSTA ERRADA") return;
-if (document.getElementById("perguntasBox").innerHTML == "RESPOSTA INCOMPLETA") return;
 if (document.getElementById("perguntasBox").innerHTML == logo) return;
 
   if (e.keyCode == 49) {

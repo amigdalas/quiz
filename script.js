@@ -76,7 +76,13 @@ if (shuffler) perguntas = perguntas.shuffle();
 perguntas.push("ACABARAM AS PERGUNTAS");
 
 function ChangeQuestion(n){
+
+document.body.style.backgroundColor = 'black';
+bgColor = "black";
+    
 if (perguntas[n] == undefined) counter = 0, n = 0;
+if (document.getElementById("perguntasBox").innerText != "PRÓXIMA PERGUNTA") 
+    return document.getElementById("perguntasBox").innerText = "PRÓXIMA PERGUNTA"
 document.getElementById("perguntasBox").innerText = perguntas[n];
 }
 
@@ -101,14 +107,12 @@ document.getElementById("perguntasBox").innerText = "RESPOSTA ERRADA"
     }
 
 if(e.keyCode == 51){
-bgColor = "black";
+bgColor = "yellow";
 
-document.getElementById("perguntasBox").innerText = "PRÓXIMA PERGUNTA"
+document.getElementById("perguntasBox").innerText = "RESPOSTA INCOMPLETA"
     }
 
     if(e.keyCode == 32){
-document.body.style.backgroundColor = 'black';
-bgColor = "black";
         counter ++
 ChangeQuestion(counter)
     }

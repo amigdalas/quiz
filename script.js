@@ -111,12 +111,12 @@ const ChangeQuestion = async (n) => {
 //ChangeQuestion(counter);
 
 document.onclick = function (e) {
-  if (document.getElementById("perguntasBox").innerHTML == "PRÓXIMA PERGUNTA") ChangeQuestion(counter);
+ChangeQuestion(counter);
 };
 
 document.body.onkeyup = function (e) {
 
-  if (e.keyCode == 32 && document.getElementById("perguntasBox").innerHTML == "PRÓXIMA PERGUNTA") return ChangeQuestion(counter);
+  if (e.keyCode == 32 && (document.getElementById("perguntasBox").innerHTML == "PRÓXIMA PERGUNTA" || document.getElementById("perguntasBox").innerHTML == logo) return ChangeQuestion(counter);
 
 if (document.getElementById("perguntasBox").innerHTML == "PRÓXIMA PERGUNTA") return;
 if (document.getElementById("perguntasBox").innerHTML == logo) return;

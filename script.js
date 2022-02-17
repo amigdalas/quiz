@@ -1,14 +1,18 @@
+var url_string = window.location.href
+var url = new URL(url_string);
+var shuffler = url.searchParams.get("random");
+
 var perguntas = [
-    "Você é casada/o?",
-    "Você pretende ter filhos?",
-    "Quando você fica doente,\nvocê falta no trabalho?",
-    "O que você faz para agradar o chefão?",
-    "Cite um defeito e uma qualidade sua.",
-    "Você tem uma vida sexual ativa?\nIsso mesmo, você transa?",
     "Quantas horas você dorme por dia?",
+    "O que você faz para agradar o chefão?",
+    "Você tem uma vida sexual ativa?\nIsso mesmo, você transa?",        
+    "Cite um defeito e uma qualidade sua.",
+    "Você é casada/o?",
+    "Quando você fica doente,\nvocê falta no trabalho?",
     "Você toma remédio controlado?",
     "Você trabalha em casa?",
-    " Qual o seu record de horas trabalhadas ininterruptas?"
+    "Você pretende ter filhos?",
+    "Qual o seu record de horas trabalhadas ininterruptas?"
 
 ];
 var perguntas2 = [/*
@@ -68,7 +72,7 @@ var bgColor = "black";
 //PERGUNTAS WAS HERE
 
 perguntas = perguntas.concat(perguntas2);
-perguntas = perguntas.shuffle();
+if (shuffler) perguntas = perguntas.shuffle();
 perguntas.push("ACABARAM AS PERGUNTAS");
 
 function ChangeQuestion(n){

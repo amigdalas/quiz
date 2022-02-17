@@ -74,7 +74,7 @@ var bgColor = "black";
 
 //perguntas = perguntas.concat(perguntas2);
 if (shuffler) perguntas = perguntas.shuffle();
-if (maximo) perguntas = perguntas.length = maximo - 1;
+if (maximo) perguntas.length = maximo - 1;
 
 perguntas.push("ACABARAM AS PERGUNTAS");
 

@@ -82,7 +82,7 @@ bgColor = "black";
     
 if (perguntas[n] == undefined) counter = 0, n = 0
 
-if (perguntas[n] != 0 && document.getElementById("perguntasBox").innerText != "PRÓXIMA PERGUNTA") 
+if (n != 0 && document.getElementById("perguntasBox").innerText != "PRÓXIMA PERGUNTA") 
     return document.getElementById("perguntasBox").innerText = "PRÓXIMA PERGUNTA"
 document.getElementById("perguntasBox").innerText = perguntas[n];
 counter ++

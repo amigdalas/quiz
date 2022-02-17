@@ -3,6 +3,7 @@ var url = new URL(url_string);
 var shuffler = url.searchParams.get("random");
 var maximo = url.searchParams.get("maximo");
 
+
 var animTXT = 30;
 var logo  = document.getElementById("perguntasBox").innerHTML;
 
@@ -57,6 +58,8 @@ var perguntas2 = [
   "Se preocupar com a moralidade dos seus atos é algo para perdedores?",
 ];
 
+var respostas = ["RESPOSTA CORRETA", "RESPOSTA ERRADA", "RESPOSTA INCOMPLETA", logo]
+
 Array.prototype.shuffle = function () {
   var i = this.length,
     j,
@@ -82,7 +85,8 @@ var bgColor = "black";
 
 //perguntas = perguntas.concat(perguntas2);
 if (shuffler) perguntas = perguntas.shuffle();
-if (maximo) perguntas.length = maximo;
+if (maximo) perguntas.length = maximo 
+else maximo = perguntas.lenght;
 
 perguntas.push(logo);
 
@@ -111,12 +115,12 @@ const ChangeQuestion = async (n) => {
 //ChangeQuestion(counter);
 
 document.onclick = function (e) {
-ChangeQuestion(counter);
+ if (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1)  ChangeQuestion(counter);
 };
 
 document.body.onkeyup = function (e) {
 
-  if ( e.keyCode == 32 && (document.getElementById("perguntasBox").innerHTML == "PRÓXIMA PERGUNTA" || document.getElementById("perguntasBox").innerHTML == logo) ) return ChangeQuestion(counter);
+  if ( e.keyCode == 32 && (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1) ) return ChangeQuestion(counter);
 
 if (document.getElementById("perguntasBox").innerHTML == "PRÓXIMA PERGUNTA") return;
 if (document.getElementById("perguntasBox").innerHTML == logo) return;

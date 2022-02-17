@@ -88,7 +88,7 @@ perguntas.push(logo);
 
 const ChangeQuestion = async (n) => {
   document.body.style.backgroundColor = "black";
-  bgColor = "#00003B";
+  bgColor = "black";
 
   if (perguntas[n] == undefined) (counter = 0), (n = 0);
 
@@ -103,6 +103,7 @@ const ChangeQuestion = async (n) => {
   }
 
   document.getElementById("perguntasBox").innerHTML = perguntas[n];
+  bgColor = "#00003B";
   counter++;
 };
 

@@ -84,9 +84,9 @@ function ChangeQuestion(n){
 document.body.style.backgroundColor = 'black';
 bgColor = "black";
     
-if (perguntas[n] == undefined) counter = 0, n = 0,
+if (perguntas[n] == undefined) { counter = 0, n = 0;
     return document.getElementById("perguntasBox").innerHTML = logo;
-
+                               }
 
 if (document.getElementById("perguntasBox").innerText != "PRÓXIMA PERGUNTA") 
     return document.getElementById("perguntasBox").innerText = "PRÓXIMA PERGUNTA"

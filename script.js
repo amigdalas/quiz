@@ -88,14 +88,14 @@ perguntas.push(logo);
 
 const ChangeQuestion = async (n) => {
   document.body.style.backgroundColor = "black";
-  bgColor = "black";
+  bgColor = "#00003B";
 
   if (perguntas[n] == undefined) (counter = 0), (n = 0);
 
   if ( (n != 0 && document.getElementById("perguntasBox").innerHTML != "PRÓXIMA PERGUNTA")
 && n < maximo
   )
-    return (document.getElementById("perguntasBox").innerHTML = "PRÓXIMA PERGUNTA"), bgColor = "#00003B";
+    return (document.getElementById("perguntasBox").innerHTML = "PRÓXIMA PERGUNTA"), bgColor = "black";
 
   if (n < maximo) for (let i = 0; i < perguntas2.length; i++) {
     document.getElementById("perguntasBox").innerHTML = perguntas2[i];

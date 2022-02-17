@@ -3,6 +3,8 @@ var url = new URL(url_string);
 var shuffler = url.searchParams.get("random");
 var maximo = url.searchParams.get("maximo");
 
+var animTXT = 30
+
 var perguntas = [
   "Quantas horas você dorme por dia?",
   "O que você faz para agradar o chefão?",
@@ -98,7 +100,7 @@ const ChangeQuestion = async (n) => {
 
   for (let i = 0; i < perguntas2.length; i++) {
     document.getElementById("perguntasBox").innerText = perguntas2[i];
-    await sleep(100);
+    await sleep(animTXT);
   }
 
   document.getElementById("perguntasBox").innerText = perguntas[n];

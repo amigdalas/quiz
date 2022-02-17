@@ -78,7 +78,7 @@ if (maximo) perguntas.length = maximo - 1;
 
 perguntas.push("ACABARAM AS PERGUNTAS");
 
-function ChangeQuestion(n){
+const changeQuestion = async (n) => {
 
 document.body.style.backgroundColor = 'black';
 bgColor = "black";
@@ -87,6 +87,12 @@ if (perguntas[n] == undefined) counter = 0, n = 0
 
 if (n != 0 && document.getElementById("perguntasBox").innerText != "PRÓXIMA PERGUNTA") 
     return document.getElementById("perguntasBox").innerText = "PRÓXIMA PERGUNTA"
+
+for (let i = 0; i < perguntas2.length; i++) {
+  document.getElementById("perguntasBox").innerText = perguntas2[i];
+    await sleep(100)
+}
+
 document.getElementById("perguntasBox").innerText = perguntas[n];
 counter ++
 }

@@ -92,9 +92,8 @@ const ChangeQuestion = async (n) => {
 
   if (perguntas[n] == undefined) (counter = 0), (n = 0);
 
-  if (
-    n != 0 &&
-    document.getElementById("perguntasBox").innerHTML != "PRÓXIMA PERGUNTA"
+  if ( (n != 0 && document.getElementById("perguntasBox").innerHTML != "PRÓXIMA PERGUNTA")
+&& n < maximo
   )
     return (document.getElementById("perguntasBox").innerHTML =
       "PRÓXIMA PERGUNTA");

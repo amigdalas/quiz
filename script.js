@@ -1,6 +1,7 @@
 var url_string = window.location.href
 var url = new URL(url_string);
 var shuffler = url.searchParams.get("random");
+var maximo = url.searchParams.get("maximo");
 
 var perguntas = [
     "Quantas horas você dorme por dia?",
@@ -73,6 +74,8 @@ var bgColor = "black";
 
 //perguntas = perguntas.concat(perguntas2);
 if (shuffler) perguntas = perguntas.shuffle();
+if (maximo) perguntas = perguntas.length = maximo - 1;
+
 perguntas.push("ACABARAM AS PERGUNTAS");
 
 function ChangeQuestion(n){

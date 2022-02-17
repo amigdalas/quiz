@@ -3,7 +3,7 @@ var url = new URL(url_string);
 var shuffler = url.searchParams.get("random");
 var maximo = url.searchParams.get("maximo");
 
-var animTXT = 30
+var animTXT = 30;
 
 var perguntas = [
   "Quantas horas você dorme por dia?",
@@ -71,8 +71,8 @@ Array.prototype.shuffle = function () {
 };
 
 const sleep = (milliseconds) => {
-  return new Promise(resolve => setTimeout(resolve, milliseconds))
-}
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+};
 
 var counter = 0;
 var bgColor = "black";
@@ -81,7 +81,7 @@ var bgColor = "black";
 
 //perguntas = perguntas.concat(perguntas2);
 if (shuffler) perguntas = perguntas.shuffle();
-if (maximo) perguntas.length = maximo - 1;
+if (maximo) perguntas.length = maximo;
 
 perguntas.push("ACABARAM AS PERGUNTAS");
 
@@ -145,8 +145,6 @@ function flashtext(ele, col) {
     document.body.style.backgroundColor = "black";
   }
 }
-
-
 
 setInterval(function () {
   flashtext("flashingtext", bgColor);

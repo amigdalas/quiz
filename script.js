@@ -95,8 +95,7 @@ const ChangeQuestion = async (n) => {
   if ( (n != 0 && document.getElementById("perguntasBox").innerHTML != "PRÓXIMA PERGUNTA")
 && n < maximo
   )
-    return (document.getElementById("perguntasBox").innerHTML =
-      "PRÓXIMA PERGUNTA");
+    return (document.getElementById("perguntasBox").innerHTML = "PRÓXIMA PERGUNTA"), bgColor = "#00003B";
 
   if (n < maximo) for (let i = 0; i < perguntas2.length; i++) {
     document.getElementById("perguntasBox").innerHTML = perguntas2[i];
@@ -114,6 +113,15 @@ document.onclick = function (e) {
 };
 
 document.body.onkeyup = function (e) {
+
+  if (e.keyCode == 32) return ChangeQuestion(counter);
+
+if (document.getElementById("perguntasBox").innerHTML == "PRÓXIMA PERGUNTA") return;
+if (document.getElementById("perguntasBox").innerHTML == "RESPOSTA CORRETA") return;
+if (document.getElementById("perguntasBox").innerHTML == "RESPOSTA ERRADA") return;
+if (document.getElementById("perguntasBox").innerHTML == "RESPOSTA INCOMPLETA") return;
+if (document.getElementById("perguntasBox").innerHTML == logo) return;
+
   if (e.keyCode == 49) {
     bgColor = "Green";
     document.getElementById("perguntasBox").innerHTML = "RESPOSTA CORRETA";
@@ -127,10 +135,6 @@ document.body.onkeyup = function (e) {
   if (e.keyCode == 51) {
     bgColor = "orange";
     document.getElementById("perguntasBox").innerHTML = "RESPOSTA INCOMPLETA";
-  }
-
-  if (e.keyCode == 32) {
-    ChangeQuestion(counter);
   }
 };
 

@@ -98,7 +98,7 @@ const ChangeQuestion = async (n) => {
     return (document.getElementById("perguntasBox").innerHTML =
       "PRÓXIMA PERGUNTA");
 
-  for (let i = 0; i < perguntas2.length; i++) {
+  if (&& n < maximo) for (let i = 0; i < perguntas2.length; i++) {
     document.getElementById("perguntasBox").innerHTML = perguntas2[i];
     await sleep(animTXT);
   }

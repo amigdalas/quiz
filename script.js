@@ -94,18 +94,18 @@ const ChangeQuestion = async (n) => {
   document.getElementById("rodada").innerHTML = "";
   document.body.style.backgroundColor = "black";
   bgColor = "black";
-  var dado = 0;
+  var dado = 1;
 
   if (perguntas[n] == undefined) (counter = 0), (n = 0);
 
- if (  document.getElementById("perguntasBox").innerHTML != respostas[3] && n < maximo ) dado = 1;
+ if (  document.getElementById("perguntasBox").innerHTML != respostas[3] && n < maximo ) dado = 2;
 
-  if (n < maximo) for (let i = 0; i < perguntas2.length; i++) { 
+  if (n < maximo) for (let i = 0; i < perguntas2.length / dado; i++) { 
     document.getElementById("perguntasBox").innerHTML = perguntas2[i];
     await sleep(animTXT);  
                  }
  
-   if (dado == 1) return (document.getElementById("perguntasBox").innerHTML = respostas[3]), bgColor = "#00003B";
+   if (dado != 1) return (document.getElementById("perguntasBox").innerHTML = respostas[3]), bgColor = "#00003B";
   
   document.getElementById("perguntasBox").innerHTML = perguntas[n];
   counter++;

@@ -58,7 +58,7 @@ var perguntas2 = [
   "Se preocupar com a moralidade dos seus atos é algo para perdedores?",
 ];
 
-var respostas = ["RESPOSTA CORRETA", "RESPOSTA ERRADA", "METADE DOS PONTOS", "PRÓXIMA PERGUNTA", logo]
+var respostas = ["RESPOSTA CORRETA", "RESPOSTA ERRADA", "METADE DOS PONTOS", "JOGUEM O DADO", logo]
 
 Array.prototype.shuffle = function () {
   var i = this.length,
@@ -96,10 +96,10 @@ const ChangeQuestion = async (n) => {
 
   if (perguntas[n] == undefined) (counter = 0), (n = 0);
 
-  if ( (n != 0 && document.getElementById("perguntasBox").innerHTML != "PRÓXIMA PERGUNTA")
+  if ( (n != 0 && document.getElementById("perguntasBox").innerHTML != respostas[3])
 && n < maximo
   )
-    return (document.getElementById("perguntasBox").innerHTML = "PRÓXIMA PERGUNTA"), bgColor = "black";
+    return (document.getElementById("perguntasBox").innerHTML = respostas[3]), bgColor = "black";
 
   if (n < maximo) for (let i = 0; i < perguntas2.length; i++) {
     document.getElementById("perguntasBox").innerHTML = perguntas2[i];
@@ -122,22 +122,22 @@ document.body.onkeyup = function (e) {
 
   if ( e.keyCode == 32 && (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1) ) return ChangeQuestion(counter);
 
-if (document.getElementById("perguntasBox").innerHTML == "PRÓXIMA PERGUNTA") return;
+if (document.getElementById("perguntasBox").innerHTML == respostas[3]) return;
 if (document.getElementById("perguntasBox").innerHTML == logo) return;
 
   if (e.keyCode == 49) {
     bgColor = "Green";
-    document.getElementById("perguntasBox").innerHTML = "RESPOSTA CORRETA";
+    document.getElementById("perguntasBox").innerHTML = respostas[0];
   }
 
   if (e.keyCode == 50) {
     bgColor = "FireBrick";
-    document.getElementById("perguntasBox").innerHTML = "RESPOSTA ERRADA";
+    document.getElementById("perguntasBox").innerHTML = respostas[1];
   }
 
   if (e.keyCode == 51) {
     bgColor = "orange";
-    document.getElementById("perguntasBox").innerHTML = "METADE DOS PONTOS";
+    document.getElementById("perguntasBox").innerHTML = respostas[2];
   }
 };
 

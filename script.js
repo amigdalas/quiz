@@ -101,13 +101,11 @@ const ChangeQuestion = async (n) => {
   )
     return (document.getElementById("perguntasBox").innerHTML = respostas[3]), bgColor = "black";
 
-  if (n < maximo){ bgColor = "#00003B";
-                  for (let i = 0; i < perguntas2.length; i++) { 
-                    document.getElementById("perguntasBox").innerHTML = perguntas2[i];
-                    await sleep(animTXT);  
-                  }
+  if (n < maximo) for (let i = 0; i < perguntas2.length; i++) { 
+    document.getElementById("perguntasBox").innerHTML = perguntas2[i];
+    await sleep(animTXT);  
                  }
-  
+  bgColor = "#00003B";
   document.getElementById("perguntasBox").innerHTML = perguntas[n];
   if (document.getElementById("perguntasBox").innerHTML != logo) bgColor = "black"
   else bgColor = "black"

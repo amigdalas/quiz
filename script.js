@@ -58,7 +58,7 @@ var perguntas2 = [
   "Se preocupar com a moralidade dos seus atos é algo para perdedores?",
 ];
 
-var respostas = ["RESPOSTA CORRETA", "RESPOSTA ERRADA", "RESPOSTA INCOMPLETA", "PRÓXIMA PERGUNTA", logo]
+var respostas = ["RESPOSTA CORRETA", "RESPOSTA ERRADA", "METADE DOS PONTOS", "PRÓXIMA PERGUNTA", logo]
 
 Array.prototype.shuffle = function () {
   var i = this.length,
@@ -137,7 +137,7 @@ if (document.getElementById("perguntasBox").innerHTML == logo) return;
 
   if (e.keyCode == 51) {
     bgColor = "orange";
-    document.getElementById("perguntasBox").innerHTML = "RESPOSTA INCOMPLETA";
+    document.getElementById("perguntasBox").innerHTML = "METADE DOS PONTOS";
   }
 };
 

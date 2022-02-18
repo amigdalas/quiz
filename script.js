@@ -121,11 +121,19 @@ document.getElementById("rodada").innerHTML = "";
 
 document.body.onkeyup = function (e) {
   document.getElementById("rodada").innerHTML = "";
-  if ( (e.keyCode == 32 || e.keyCode == 39) && (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1) ) return ChangeQuestion(counter);
+  if ( e.keyCode == 32 && (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1) ) return ChangeQuestion(counter);
 
   if ( e.keyCode == 37 ) {
+document.getElementById("perguntasBox").innerHTML = respostas[3];
     counter --;
     counter < 0 ? counter = 0 : "";
+    ChangeQuestion(counter);
+  }
+
+if ( e.keyCode == 39 ) {
+document.getElementById("perguntasBox").innerHTML = respostas[3];
+    counter ++;
+    counter > counter.length ? counter = counter.length : "";
     ChangeQuestion(counter);
   }
   

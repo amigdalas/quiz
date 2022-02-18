@@ -163,7 +163,14 @@ if (document.getElementById("perguntasBox").innerHTML == logo) return;
   
     if (e.keyCode == 38) {
     bgColor = "#00003B";
+      document.getElementById("rodada").innerHTML = "";
     document.getElementById("perguntasBox").innerHTML = respostas[3];
+  }
+  
+      if (e.keyCode == 40) {
+    bgColor = "black";
+      document.getElementById("rodada").innerHTML = "";
+    document.getElementById("perguntasBox").innerHTML = logo;
   }
   
 };

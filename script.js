@@ -116,12 +116,15 @@ const ChangeQuestion = async (n) => {
 //ChangeQuestion(counter);
 
 document.onclick = function (e) {
+  if ( perguntas2.indexOf(document.getElementById("perguntasBox").innerHTML) > -1) return;
 
  if (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1)  document.getElementById("rodada").innerHTML = "", 
    ChangeQuestion(counter);
 };
 
 document.body.onkeyup = function (e) {
+  if ( perguntas2.indexOf(document.getElementById("perguntasBox").innerHTML) > -1) return;
+  
   if ( e.keyCode == 32 && (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1) ) return ChangeQuestion(counter);
 
   if ( e.keyCode == 37 ) {

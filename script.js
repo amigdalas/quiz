@@ -96,10 +96,8 @@ const ChangeQuestion = async (n) => {
 
   if (perguntas[n] == undefined) (counter = 0), (n = 0);
 
-  if ( (n != 0 && document.getElementById("perguntasBox").innerHTML != respostas[3])
-&& n < maximo
-  )
-    return (document.getElementById("perguntasBox").innerHTML = respostas[3]), bgColor = "black";
+  if ( (n != 0 && document.getElementById("perguntasBox").innerHTML != respostas[3]) && n < maximo )
+    return (document.getElementById("perguntasBox").innerHTML = respostas[3]), bgColor = "#00003B";
 
   if (n < maximo) for (let i = 0; i < perguntas2.length; i++) { 
     document.getElementById("perguntasBox").innerHTML = perguntas2[i];
@@ -107,7 +105,7 @@ const ChangeQuestion = async (n) => {
                  }
   
   document.getElementById("perguntasBox").innerHTML = perguntas[n];
-  if (document.getElementById("perguntasBox").innerHTML != logo) bgColor = "#00003B";
+  if (document.getElementById("perguntasBox").innerHTML != logo) bgColor = "black";
   else bgColor = "black"
   counter++;
 };

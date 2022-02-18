@@ -96,7 +96,7 @@ const ChangeQuestion = async (n) => {
 
   if (perguntas[n] == undefined) (counter = 0), (n = 0);
 
-  if ( (n != 0 && document.getElementById("perguntasBox").innerHTML != respostas[3]) && n < maximo )
+  if (  n < maximo ) //(n != 0 && document.getElementById("perguntasBox").innerHTML != respostas[3]) &&
     return (document.getElementById("perguntasBox").innerHTML = respostas[3]), bgColor = "#00003B";
 
   if (n < maximo) for (let i = 0; i < perguntas2.length; i++) { 

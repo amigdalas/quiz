@@ -107,7 +107,7 @@ const ChangeQuestion = async (n) => {
   document.getElementById("perguntasBox").innerHTML = perguntas[n];
   counter++;
   
-  if (document.getElementById("perguntasBox").innerHTML != logo) document.getElementById("rodada").innerHTML = counter+"ª RODADA", bgColor = "black";
+  if (document.getElementById("perguntasBox").innerHTML != logo) document.getElementById("rodada").innerHTML = counter+"ª PERGUNTA", bgColor = "black";
   else bgColor = document.getElementById("rodada").innerHTML = "", "black"
   
 };

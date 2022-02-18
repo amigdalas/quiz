@@ -91,6 +91,7 @@ else maximo = perguntas.lenght;
 perguntas.push(logo);
 
 const ChangeQuestion = async (n) => {
+  document.getElementById("rodada").innerHTML = "";
   document.body.style.backgroundColor = "black";
   bgColor = "black";
 
@@ -115,8 +116,9 @@ const ChangeQuestion = async (n) => {
 //ChangeQuestion(counter);
 
 document.onclick = function (e) {
-document.getElementById("rodada").innerHTML = "";
- if (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1)  ChangeQuestion(counter);
+
+ if (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1)  document.getElementById("rodada").innerHTML = "", 
+   ChangeQuestion(counter);
 };
 
 document.body.onkeyup = function (e) {

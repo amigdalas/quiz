@@ -131,7 +131,7 @@ document.body.onkeyup = function (e) {
 document.getElementById("perguntasBox").innerHTML = respostas[3];
     counter --;
     counter --;
-   counter = counter < 1 ? perguntas.length - 1 : counter;
+   counter = counter < 0 ? perguntas.length - 1 : counter;
     ChangeQuestion(counter);
   }
 

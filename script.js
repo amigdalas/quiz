@@ -118,8 +118,14 @@ document.onclick = function (e) {
 
 document.body.onkeyup = function (e) {
 
-  if ( e.keyCode == 32 && (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1) ) return ChangeQuestion(counter);
+  if ( (e.keyCode == 32 || e.keyCode == 39) && (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1) ) return ChangeQuestion(counter);
 
+  if ( e.keyCode == 37 ) {
+    counter --;
+    counter < 0 ? counter = 0 : "";
+    ChangeQuestion(counter);
+  }
+  
 if (document.getElementById("perguntasBox").innerHTML == respostas[3]) return;
 if (document.getElementById("perguntasBox").innerHTML == logo) return;
 

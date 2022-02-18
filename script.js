@@ -105,9 +105,9 @@ const ChangeQuestion = async (n) => {
     document.getElementById("perguntasBox").innerHTML = perguntas2[i];
     await sleep(animTXT);  
                  }
-  bgColor = "#00003B";
+  
   document.getElementById("perguntasBox").innerHTML = perguntas[n];
-  if (document.getElementById("perguntasBox").innerHTML != logo) bgColor = "black"
+  if (document.getElementById("perguntasBox").innerHTML != logo) bgColor = "#00003B";
   else bgColor = "black"
   counter++;
 };

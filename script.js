@@ -128,14 +128,14 @@ document.body.onkeyup = function (e) {
 document.getElementById("perguntasBox").innerHTML = respostas[3];
     counter --;
     counter --;
-    counter < 0 ? counter = counter.length : "";
+    counter < 0 ? counter = counter.length -1 : "";
     ChangeQuestion(counter);
   }
 
 if ( e.keyCode == 39 ) {
 document.getElementById("perguntasBox").innerHTML = respostas[3];
     //counter ++;
-    counter > counter.length ? counter = counter.length : "";
+    //counter > counter.length ? counter = counter.length : "";
     ChangeQuestion(counter);
   }
   

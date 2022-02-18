@@ -98,9 +98,9 @@ const ChangeQuestion = async (n) => {
 
   if (perguntas[n] == undefined) (counter = 0), (n = 0);
 
- if (  document.getElementById("perguntasBox").innerHTML != respostas[3] && n < maximo ) dado = 2;
+ if (  document.getElementById("perguntasBox").innerHTML != respostas[3] && n < maximo ) dado = 3;
 
-  if (n < maximo) for (let i = 0; i < perguntas2.length / dado; i++) { 
+  if (n < maximo) for (let i = 0; i < Math.round(perguntas2.length / dado); i++) { 
     document.getElementById("perguntasBox").innerHTML = perguntas2[i];
     await sleep(animTXT);  
                  }

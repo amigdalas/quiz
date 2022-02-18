@@ -115,11 +115,12 @@ const ChangeQuestion = async (n) => {
 //ChangeQuestion(counter);
 
 document.onclick = function (e) {
+document.getElementById("rodada").innerHTML = "";
  if (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1)  ChangeQuestion(counter);
 };
 
 document.body.onkeyup = function (e) {
-
+  document.getElementById("rodada").innerHTML = "";
   if ( (e.keyCode == 32 || e.keyCode == 39) && (respostas.indexOf(document.getElementById("perguntasBox").innerHTML) > -1) ) return ChangeQuestion(counter);
 
   if ( e.keyCode == 37 ) {

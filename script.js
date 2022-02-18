@@ -97,13 +97,13 @@ const ChangeQuestion = async (n) => {
 
   if (perguntas[n] == undefined) (counter = 0), (n = 0);
 
-  if (  document.getElementById("perguntasBox").innerHTML != respostas[3] && n < maximo ) //(n != 0 && document.getElementById("perguntasBox").innerHTML != respostas[3]) &&
-    return (document.getElementById("perguntasBox").innerHTML = respostas[3]), bgColor = "#00003B";
-
   if (n < maximo) for (let i = 0; i < perguntas2.length; i++) { 
     document.getElementById("perguntasBox").innerHTML = perguntas2[i];
     await sleep(animTXT);  
                  }
+  
+  if (  document.getElementById("perguntasBox").innerHTML != respostas[3] && n < maximo ) //(n != 0 && document.getElementById("perguntasBox").innerHTML != respostas[3]) &&
+    return (document.getElementById("perguntasBox").innerHTML = respostas[3]), bgColor = "#00003B";
   
   document.getElementById("perguntasBox").innerHTML = perguntas[n];
   counter++;

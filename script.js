@@ -86,7 +86,7 @@ var bgColor = "black";
 //perguntas = perguntas.concat(perguntas2);
 if (shuffler == 1) perguntas = perguntas.shuffle();
 if (maximo) perguntas.length = maximo 
-else maximo = perguntas.lenght;
+else maximo = perguntas.length;
 
 perguntas.push(logo);
 
@@ -128,7 +128,7 @@ document.body.onkeyup = function (e) {
 document.getElementById("perguntasBox").innerHTML = respostas[3];
     counter --;
     counter --;
-   counter = counter < 1 ? counter.length - 1 : counter;
+   counter = counter < 1 ? perguntas.length - 1 : counter;
     ChangeQuestion(counter);
   }
 

@@ -105,9 +105,11 @@ const ChangeQuestion = async (n) => {
                  }
   
   document.getElementById("perguntasBox").innerHTML = perguntas[n];
-  if (document.getElementById("perguntasBox").innerHTML != logo) bgColor = "black";
-  else bgColor = "black"
   counter++;
+  
+  if (document.getElementById("perguntasBox").innerHTML != logo) document.getElementById("rodada").innerHTML = counter+"ª RODADA", bgColor = "black";
+  else bgColor = document.getElementById("rodada").innerHTML = "", "black"
+  
 };
 
 //ChangeQuestion(counter);

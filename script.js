@@ -145,6 +145,7 @@ document.getElementById("perguntasBox").innerHTML = respostas[3];
 if (document.getElementById("perguntasBox").innerHTML == respostas[3]) return;
 if (document.getElementById("perguntasBox").innerHTML == logo) return;
 
+  
   if (e.keyCode == 49) {
     bgColor = "Green";
     document.getElementById("perguntasBox").innerHTML = respostas[0];
@@ -159,6 +160,12 @@ if (document.getElementById("perguntasBox").innerHTML == logo) return;
     bgColor = "orange";
     document.getElementById("perguntasBox").innerHTML = respostas[2];
   }
+  
+    if (e.keyCode == 38) {
+    bgColor = "#00003B";
+    document.getElementById("perguntasBox").innerHTML = respostas[3];
+  }
+  
 };
 
 function flashtext(ele, col) {
